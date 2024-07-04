@@ -16,7 +16,7 @@ jobs:
         run: eslint --ext .jsx --fix src
       - name: lint
         run: echo "lint ..."
-  test:
+ test:
     needs: lint
     runs-on: ubuntu-latest
     steps:
@@ -32,7 +32,7 @@ jobs:
         run: vitest run
       - name: tests
         run: echo "tests ..."
-  deploy:
+ deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
